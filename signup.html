@@ -43,10 +43,6 @@
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: transparent;
     }
-    .container{
-      text-align: center;
-
-    }
   </style>
 
 </head>
@@ -89,45 +85,193 @@
 
 </main>
 
-<h1>LOG IN</h1>
+<h1>SIGN UP</h1>
 <br>
 <div class="kolchay">
 
+  <form>
+    <div class="mb-3">
+      <label for="noms" class="noms">nom</label>
+      <input type="string" placeholder="Entrez nom" class="form-control" id="exampleInputnoms" aria-describedby="emailHelp">
 
-  <div class="mb-3">
-    <label for="username" class="form-label">username</label>
-    <input type="string" class="form-control" placeholder="entrez votre usename" id="exampleuser">
-  </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="prenoms" class="prenoms">prenom</label>
+      <input type="string" class="form-control" placeholder="Entrez prenom" id="exampleInputprenoms" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="emails" class="emails">adresse mail</label>
+      <input type="email" class="form-control" placeholder="Entrez e-mail"id="exampleInputemails" aria-describedby="emailHelp">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="date_n" class="date_n">date de naissance</label>
+      <input type="date" class="form-control" id="date_n" aria-describedby="emailHelp">
+    </div>
+
+
+    <div class="row">
+
+      <div class="col"  >
+        <label for="date_n" class="date_n">pays</label>
+        <select name="pays" id="pays" class="form-control">
+          <option value="1">États-Unis (+1)</option>
+          <option value="93">Afghanistan (+93)</option>
+          <option value="27">Afrique du Sud (+27)</option>
+          <option value="355">Albanie (+355)</option>
+          <option value="213">Algérie (+213)</option>
+          <option value="49">Allemagne (+49)</option>
+          <option value="376">Andorre (+376)</option>
+          <option value="244">Angola (+244)</option>
+          <option value="1-264">Anguilla (+1-264)</option>
+          <option value="1-268">Antigua-et-Barbuda (+1-268)</option>
+          <option value="599">Antilles néerlandaises (+599)</option>
+          <option value="966">Arabie saoudite (+966)</option>
+          <option value="54">Argentine (+54)</option>
+          <option value="374">Arménie (+374)</option>
+          <option value="297">Aruba (+297)</option>
+          <option value="61">Australie (+61)</option>
+          <option value="43">Autriche (+43)</option>
+          <option value="994">Azerbaïdjan (+994)</option>
+          <option value="1-242">Bahamas (+1-242)</option>
+          <option value="973">Bahreïn (+973)</option>
+          <option value="880">Bangladesh (+880)</option>
+          <option value="1-246">Barbade (+1-246)</option>
+          <option value="375">Biélorussie (+375)</option>
+          <option value="32">Belgique (+32)</option>
+          <option value="501">Belize (+501)</option>
+          <option value="229">Bénin (+229)</option>
+          <option value="1-441">Bermudes (+1-441)</option>
+          <option value="975">Bhoutan (+975)</option>
+          <option value="591">Bolivie (+591)</option>
+          <option value="387">Bosnie-Herzégovine (+387)</option>
+          <option value="267">Botswana (+267)</option>
+          <option value="55">Brésil (+55)</option>
+          <option value="673">Brunei Darussalam (+673)</option>
+          <option value="359">Bulgarie (+359)</option>
+          <option value="226">Burkina Faso (+226)</option>
+          <option value="257">Burundi (+257)</option>
+          <option value="238">Cap-Vert (+238)</option>
+          <option value="855">Cambodge (+855)</option>
+          <option value="237">Cameroun (+237)</option>
+          <option value="1">Canada (+1)</option>
+          <option value="238">Cap-Vert (+238)</option>
+          <option value="56">Chili (+56)</option>
+          <option value="86">Chine (+86)</option>
+          <option value="357">Chypre (+357)</option>
+          <option value="57">Colombie (+57)</option>
+          <option value="992">Tadjikistan (+992)</option>
+          <option value="886">Taïwan (+886)</option>
+          <option value="255">Tanzanie (+255)</option>
+          <option value="235">Tchad (+235)</option>
+          <option value="420">République tchèque (+420)</option>
+          <option value="66">Thaïlande (+66)</option>
+          <option value="670">Timor oriental (+670)</option>
+          <option value="228">Togo (+228)</option>
+          <option value="676">Tonga (+676)</option>
+          <option value="1868">Trinité-et-Tobago (+1868)</option>
+          <option value="216">Tunisie (+216)</option>
+          <option value="993">Turkménistan (+993)</option>
+          <option value="90">Turquie (+90)</option>
+          <option value="688">Tuvalu (+688)</option>
+          <!-- Ajoutez ici les options pour d'autres pays -->
+        </select>
+        </span>
 
 
 
-  <div class="mb-3">
-    <label for="prenoms" class="form-label">mot de passe</label>
-    <input type="password" class="form-control" placeholder="entrez votre mot de passe" id="exampleInputPassword1">
-  </div>
+
+      </div>
+      <div class="col">
+        <label for="date_n" class="date_n">numero</label>
+        <input type="tel" id="numero" class="form-control"  name="numero">
+      </div>
+    </div>
 
 
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">se souvenir de moi</label>
-  </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-  <br>
-  <br>
-  <div class="container">
+    <script>
+      const inputTelephone = document.getElementById('numero');
+      const selectPays = document.getElementById('pays');
+
+      selectPays.addEventListener('change', () => {
+        switch(selectPays.value) {
+          case '1':
+            inputTelephone.placeholder = ' (XXX) XXX-XXXX';
+            break;
+          case '44','93','255','855','1-264':
+            inputTelephone.placeholder = ' 0XXXX XXXXXX';
+            break;
+          case '33','57','66','55','374':
+            inputTelephone.placeholder = ' 0X XX XX XX XX';
+            break;
+          case '49','27','355','676','297':
+            inputTelephone.placeholder = 'XXXX XXXXXX';
+            break;
+          case '213','244','688','992','61':
+            inputTelephone.placeholder = 'XXX XXX XXX';
+            break;
+          case '688','420','235','1868','27':
+            inputTelephone.placeholder = '1X-XX XXXx';
+            break;
+          case '216':
+            inputTelephone.placeholder = 'XX XXX XXX';
+            break;
+          default:
+            inputTelephone.placeholder = '(0X) XX-XX XXX';
+        }
+      });
+    </script>
+
     <br>
-    <p>vous n'avez pas de compte?</p>
-    <button type="submit" class="btn">SIGN UP</button>
-  </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">username</label>
+      <input type="string" class="form-control" placeholder="(doit étre unique)" id="exampleuser">
+    </div>
+
+
+
+
+
+
+    <div class="mb-3">
+      <label for="prenoms" class="form-label">mot de passe</label>
+      <input type="password" class="form-control" placeholder="entrez le mot de passe" id="exampleInputPassword1">
+    </div>
+
+    <br>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">envoyer les notifications sur l'adresse mail</label>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+
+
 
 
 
   </form>
 
 
+
+
+
   <br>
 </div>
+
+
+
+
+
 
 
 
