@@ -31,18 +31,6 @@
     integrity="sha512-WioNl04ed+Fk1mrlyIk60yrRw2S8hd5gaxJF/m5yvX9q3k8Mpt7aduOTWeJzvFAVWZXP8mliv7VcOGYlLb6Vg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      padding: 20px;
-      height: 80px;
-    }
-
-    body {
-      margin-bottom: 100px;
-      /* ou une valeur supérieure si nécessaire */
-    }
 
     .list-group-item.active {
       background-color: #343a40;
@@ -71,15 +59,16 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link" href="/Login.html">Login</a>
-            <a class="nav-link" aria-current="page" href="/Home.html">Page d'accueil</a>
-            <a class="nav-link active" href="/Bet.html">Lancer un pari</a>
-            <a class="nav-link" href="/Profil.html">Profile</a>
+            <a class="nav-link" href="/Home.html">Page d'accueil</a>
+            <a class="nav-link " href="/Bet.html">Lancer un pari</a>
+            <a class="nav-link active" aria-current="page" href="/Profil.html">Profile</a>
+            <a class="nav-link" href="/WinnerPage.html">Voir les paris gagnés</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
-  <main>
+  <main style="padding: 3vh 1vw ;padding-bottom: 10vh;min-height: 100vh;">
     <div class="container-fluid">
       <div class="row " role="tabpanel">
         <!-- List group -->
@@ -358,7 +347,7 @@
     </div>
 
   </main>
-  <footer class="bg-dark text-center text-white">
+  <footer class="bg-dark text-center text-white" style="position: relative;bottom: 0px;" >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
